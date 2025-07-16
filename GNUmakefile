@@ -1,5 +1,7 @@
+.PHONY: all
 all: main-branch
 
+.PHONY: main-branch
 main-branch:
 	git -C main-branch fetch --all
 	cd main-branch
