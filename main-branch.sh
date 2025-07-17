@@ -1,6 +1,7 @@
 #!/bin/sh
 
 git -C main-branch fetch --all
+git -C main-branch pull origin main
 cd main-branch 
 opam switch remove $1 --yes || true
 opam switch set ocaml-basics
