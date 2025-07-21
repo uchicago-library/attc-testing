@@ -3,9 +3,9 @@
 # TODO: conditionalize all this on `main` having updates
 # git remote update && git diff --quiet origin/main
 
-git -C main-branch fetch --all
-git -C main-branch pull origin main
-cd main-branch 
+git -C mbox-experiments-branch fetch --all
+git -C mbox-experiments-branch pull origin mbox-experiments
+cd mbox-experiments-branch 
 opam switch remove $1 --yes || true
 opam switch set ocaml-basics
 eval $(opam env)
