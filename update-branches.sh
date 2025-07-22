@@ -3,8 +3,6 @@
 # TODO: conditionalize all this on `main` having updates
 # git remote update && git diff --quiet origin/main
 
-# set FORCE_TESTS to make it run regardless of updates to the branch
-
 set -e
 set -x
 
