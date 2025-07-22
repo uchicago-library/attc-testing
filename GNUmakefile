@@ -2,7 +2,7 @@ FORCE_TESTS=false
 export FORCE_TESTS
 
 .PHONY: all
-all: mbox-experiments
+all: mbox-experiments main-branch
 
 .PHONY: mbox-experiments-branch
 mbox-experiments:
