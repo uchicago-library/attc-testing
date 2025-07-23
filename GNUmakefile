@@ -2,12 +2,12 @@ FORCE_TESTS=false
 export FORCE_TESTS
 
 .PHONY: all
-all: mbox-experiments main-branch
+all: mbox-experiments main
 
-.PHONY: mbox-experiments-branch
+.PHONY: mbox-experiments
 mbox-experiments:
 	./update-branches.sh $@
 
-.PHONY: main-branch
+.PHONY: main
 main:
 	./update-branches.sh $@
