@@ -25,6 +25,7 @@ then git -C $1-branch fetch --all
      rm -rf _opam || true
      opam switch create . --deps-only --repos dldc=https://dldc.lib.uchicago.edu/opam,default --yes
      eval $(opam env)
+     opam exec -- dune build
      opam exec -- dune exec --display=quiet -- attc --backend=ocamlnet < ../input/kaegiw_inbox.mbox > ../output/kaegiw_inbox_$1_ocamlnet.mbox 2> ../output/kaegiw_inbox_$1_errors_ocamlnet.log
      opam exec -- dune exec --display=quiet -- attc --backend=mrmime   < ../input/kaegiw_inbox.mbox > ../output/kaegiw_inbox_$1_mrmime.mbox   2> ../output/kaegiw_inbox_$1_errors_mrmime.log
 else echo "update-branches: nothing to do."
