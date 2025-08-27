@@ -15,7 +15,8 @@ function there_are_updates() {
 }
 
 if there_are_updates $1 || $FORCE_TESTS
-then git -C $1-branch fetch --all
+then git -C $1-branch stash
+     git -C $1-branch fetch --all
      git -C $1-branch pull origin $1
      cd $1-branch 
      opam switch remove $SWITCH_NAME --yes || true
